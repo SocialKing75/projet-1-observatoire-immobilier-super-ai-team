@@ -167,11 +167,6 @@ elif section == "📊 Market Overview":
     st.subheader("Market Analytics")
     colA, colB = st.columns(2)
     
-    with colA:
-        st.write("**Average Price by District (€)**")
-        chart_data = {ds.district: ds.avg_price for ds in stats.by_district.values()}
-        st.bar_chart(chart_data, use_container_width=True)
-        
     with colB:
         st.write("**Average Price per m² by District (€)**")
         chart_data_m2 = {ds.district: ds.avg_price_per_m2 for ds in stats.by_district.values()}
